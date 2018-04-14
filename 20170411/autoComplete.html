@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>autocomplete</title>
+</head>
+<body>
+    <form>
+        <!-- 这个autocomplete是从头开始匹配，不能随机模糊匹配 -->
+        <input type="text" autocomplete="on" list="list">
+        <datalist id="list" style="display:none">
+            <option value="汉子">测试</option>
+            <option value="汉子">苹果</option>
+            <option value="baaa">栗子</option>
+            <option value="aaa">西瓜</option>
+            <option value="151">葡萄</option>
+        </datalist>
+    </form>
+    <form>
+        <input type="text" name="noAuto" list="list2">
+        <datalist id="list2" style="display:none">
+            <option value="111">测试</option>
+            <option value="121">苹果</option>
+            <option value="131">栗子</option>
+            <option value="141">西瓜</option>
+            <option value="151">葡萄</option>
+        </datalist>
+    </form>
+</body>
+</html>
