@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #clock {
+            font: bold 24p sans;
+            background: #ddf;
+            padding: 10px;
+            border: navy solid 2px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>时钟</h1>
+    <span id = "clock"></span>
+    <script>
+    function displayTime(){
+        var el = document.getElementById('clock');
+        var now  = new Date();
+        el.innerHTML = now.toLocaleTimeString();
+        setTimeout(displayTime,1000);
+    }
+    window.onload = displayTime;
+    </script>
+</body>
+</html>
